@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-source_location=$(buildkite-agent meta-data get location)
+source_location=$(buildkite-agent meta-data get source_location)
 
 # Check the selected source location
 if [[ "$source_location" == "legacy-quorbit" ]]; then
