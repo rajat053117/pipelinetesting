@@ -1,9 +1,9 @@
 steps:
   - input: "Flush Redis Cache"
-    key: location
+    key: input
     fields:
       - select: Location
-        key: location
+        key: source_location
         hint: Where do you want the redis cache to be flushed?
         required: true
         options:
