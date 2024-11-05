@@ -11,9 +11,3 @@ steps:
       value: legacy-quorbit  
     - label: SWP UKG
       value: swp-ukg
-
-  - command: "./fetch-project.sh | buildkite-agent pipeline upload"   
-    agents:
-      queue: "staging"
-    depends_on: input
-    label: "Fetching project"
