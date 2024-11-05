@@ -1,6 +1,6 @@
 steps:
 - input: "Flush Redis Cache"
-  key: select
+  key: input
   fields:
   - select: Location
     key: location
