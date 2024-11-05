@@ -1,6 +1,6 @@
 steps:
 - input: "Flush Redis Cache"
-  key: input
+  key: select
   fields:
   - select: Location
     key: location
@@ -16,4 +16,4 @@ steps:
     agents:
       queue: "staging"
     depends_on: input
-    label: "Fetching project"  
+    label: "Fetching project"
