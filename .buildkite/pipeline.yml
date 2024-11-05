@@ -12,6 +12,6 @@ steps:
           - label: SWP UKG
             value: swp-ukg
 
-  - command: "./fetch-project.sh | buildkite-agent pipeline upload"
+  - command: "./fetch-environment.sh | buildkite-agent pipeline upload"
     depends_on: input
-    label: "Fetching project"
+    label: "Fetching Environments"
