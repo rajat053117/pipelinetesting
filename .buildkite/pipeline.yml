@@ -2,16 +2,22 @@ steps:
   - input: "Flush Redis Cache"
     key: input
     fields:
-      - select: Location
-        key: source_location
+      - select: project
+        key: source_project
         hint: Where do you want the redis cache to be flushed?
         required: true
         options:
-          - label: Legacy Quorbit
-            value: legacy-quorbit  
-          - label: SWP UKG
-            value: swp-ukg
-
-  - command: "./fetch-environment.sh | buildkite-agent pipeline upload"
-    depends_on: input
-    label: "Fetching Environments"
+          - label: Quorbit Staging
+            value: quorbit-staging  
+          - label: Quorbit Preprod
+            value: quorbit-preprod
+          - label: Quorbit Prod
+            value: quorbit-prod 
+          - label: Quorbit Prod US
+            value: quorbit-prod-us
+          - label: SWP staging
+            value: swp-dev01-eng01  
+          - label: SWP PROD US
+            value: swp-cus01-cst01
+          - label: SWP PROD US 
+            value: swp-cus04-cst01
